@@ -185,6 +185,15 @@ static unsigned int defaultattr = 11;
 static uint forcemousemod = ShiftMask;
 
 /*
+ * Extract all visible URLs and present dmenu to select and open or copy
+ * Also script to copy output of a command to clipboard
+ */
+
+static char *openurlcmd[] = { "/bin/sh", "-c", "st-urlhandler -o", "externalpipe", NULL };
+static char *copyurlcmd[] = { "/bin/sh", "-c", "st-urlhandler -c", "externalpipe", NULL };
+static char *copyoutput[] = { "/bin/sh", "-c", "st-copyout", "externalpipe", NULL };
+
+/*
  * Internal mouse shortcuts.
  * Beware that overloading Button1 will disable the selection.
  */
@@ -219,6 +228,10 @@ static Shortcut shortcuts[] = {
 	{ TERMMOD,              XK_Num_Lock,    numlock,        {.i =  0} },
 	{ ShiftMask,            XK_Page_Up,     kscrollup,      {.i = -1} },
 	{ ShiftMask,            XK_Page_Down,   kscrolldown,    {.i = -1} },
+    { TERMMOD,              XK_L,           externalpipe,   { .v = openurlcmd } },
+    { TERMMOD,              XK_K,           externalpipe,   { .v = copyurlcmd } },
+    { TERMMOD,              XK_O,           externalpipe,   { .v = copyoutput } },
+
 };
 
 /*
