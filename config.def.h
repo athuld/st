@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Fira Code Retina:pixelsize=16:antialias=true:autohint=true";
+static char *font = "Cascadia Code:pixelsize=18:antialias=true:autohint=true";
 static int borderpx = 2;
 
 /*
@@ -106,35 +106,35 @@ char *termname = "st-256color";
 unsigned int tabspaces = 8;
 
 /* bg opacity */
-float alpha = 0.9, alphaUnfocused = 0.5;
+float alpha = 1, alphaUnfocused = 0.9;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
 	/* 8 normal colors */
-	"#3b4252", /* black   */
-	"#bf616a", /* red     */
-	"#a3be8c", /* green   */
-	"#ebcb8b", /* yellow  */
-	"#81a1c1", /* blue    */
-	"#b48ead", /* magenta */
-	"#88c0d0", /* cyan    */
-	"#e5e9f0", /* white   */
- 
- 	/* 8 bright colors */
-	"#4c566a", /* black   */
-	"#bf616a", /* red     */
-	"#a3be8c", /* green   */
-	"#ebcb8b", /* yellow  */
-	"#81a1c1", /* blue    */
-	"#b48ead", /* magenta */
-	"#8fbcbb", /* cyan    */
-	"#eceff4", /* white   */
+  "#323d43", /* black   */
+  "#e67e80", /* red     */
+  "#a7c080", /* green   */
+  "#dbbc7f", /* yellow  */
+  "#7fbbb3", /* blue    */
+  "#d699b6", /* magenta */
+  "#83c092", /* cyan    */
+  "#d3c6aa", /* white   */
+
+  /* 8 bright colors */
+  "#4b565c", /* black   */
+  "#e67e80", /* red     */
+  "#a7c080", /* green   */
+  "#dbbc7f", /* yellow  */
+  "#7fbbb3", /* blue    */
+  "#d699b6", /* magenta */
+  "#83c092", /* cyan    */
+  "#d3c6aa", /* white   */
  
  	[255] = 0,
  
  	/* more colors can be added after 255 to use with DefaultXX */
-	"#2e3440", /* background */
-	"#d8dee9", /* foreground */
+  "#2b3339", /* background */
+  "#d3c6aa", /* foreground */
 };
 
 
