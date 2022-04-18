@@ -5,11 +5,11 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "JetBrainsMono Nerd Font:pixelsize=18:antialias=true:autohint=true";
+static char *font = "JetBrainsMono Nerd Font:pixelsize=17:antialias=true:autohint=true";
 /* Spare fonts */
 static char *font2[] = {
-"Inconsolata for Powerline:pixelsize=18:antialias=true:autohint=true",
-"Hack Nerd Font Mono:pixelsize=18:antialias=true:autohint=true",
+"Hack Nerd Font:pixelsize=17:antialias=true:autohint=true",
+"DejaVu Sans:pixelsize=17:antialias=true:autohint=true",
 };
 
 /* disable bold, italic and roman fonts globally */
@@ -229,9 +229,9 @@ static Shortcut shortcuts[] = {
 	{ ControlMask,          XK_Print,       toggleprinter,  {.i =  0} },
 	{ ShiftMask,            XK_Print,       printscreen,    {.i =  0} },
 	{ XK_ANY_MOD,           XK_Print,       printsel,       {.i =  0} },
-	{ TERMMOD,              XK_Prior,       zoom,           {.f = +1} },
-	{ TERMMOD,              XK_Next,        zoom,           {.f = -1} },
-	{ TERMMOD,              XK_Home,        zoomreset,      {.f =  0} },
+	{ TERMMOD,              XK_plus,        zoom,           {.f = +1} },
+	{ TERMMOD,              XK_underscore,  zoom,           {.f = -1} },
+	{ TERMMOD,              XK_question,    zoomreset,      {.f =  0} },
 	{ TERMMOD,              XK_C,           clipcopy,       {.i =  0} },
 	{ TERMMOD,              XK_V,           clippaste,      {.i =  0} },
 	{ TERMMOD,              XK_Y,           selpaste,       {.i =  0} },
